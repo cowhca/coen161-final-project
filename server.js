@@ -23,15 +23,21 @@ const addUsername = (user) => {
 };
 
 const readUsername = (user) => {
-  client.connect((err) => {
-    const collection = client.db("project").collection("username");
-    // perform actions on the collection object
-    collection.findOne({ username: user }, (err, res) => {
-      if (err) throw err;
-      console.log("1 document found");
-      console.log(res);
-      client.close();
-      return res;
+  return new Promise(function (resolve) {
+    client.connect((err) => {
+      const collection = client.db("project").collection("username");
+      // perform actions on the collection object
+      collection
+        .findOne({})
+        .then((res) => {
+          console.log("1 document found");
+          console.log(res);
+          client.close();
+          resolve(res);
+        })
+        .catch((err) => {
+          throw err;
+        });
     });
   });
 };
@@ -50,8 +56,13 @@ const handleRequest = () => {
       if (req.url === "") {
         return sendResponse(res, 400, "Need a username");
       } else {
-        console.log(req.url.split("/")[1]);
-        return sendResponse(res, 200, readUsername(req.url.split("/")[1]));
+        let username = req.url.split("/")[1];
+        readUsername(username).then((value) => {
+          console.log(value);
+        });
+        //
+        // console.log("Read Username: " + readUsername(username));
+        // return sendResponse(res, 200, readUsername(username));
       }
     }
 
