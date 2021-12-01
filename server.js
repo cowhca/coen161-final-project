@@ -10,11 +10,11 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
 });
 
-const addUsername = (username) => {
+const addUsername = (user) => {
   client.connect((err) => {
     const collection = client.db("project").collection("username");
     // perform actions on the collection object
-    collection.insertOne({ x: username }, (err, res) => {
+    collection.insertOne({ username: user }, (err, res) => {
       if (err) throw err;
       console.log("1 document inserted");
       client.close();
@@ -22,11 +22,11 @@ const addUsername = (username) => {
   });
 };
 
-const readUsername = () => {
+const readUsername = (user) => {
   client.connect((err) => {
     const collection = client.db("project").collection("username");
     // perform actions on the collection object
-    collection.findOne({ x: 3 }, (err, res) => {
+    collection.findOne({ username: user }, (err, res) => {
       if (err) throw err;
       console.log("1 document found");
       console.log(res);
@@ -42,8 +42,7 @@ const handleRequest = () => {
       return readBody(req).then((body) => {
         if (body === "") sendResponse(res, 400, null);
         else {
-          console.log("body " + body);
-          addUsername(body);
+          addUsername(body.split("\n")[3]);
           sendResponse(res, 201, "successfull adding");
         }
       });
@@ -51,7 +50,8 @@ const handleRequest = () => {
       if (req.url === "") {
         return sendResponse(res, 400, "Need a username");
       } else {
-        return sendResponse(res, 200, readUsername());
+        console.log(req.url.split("/")[1]);
+        return sendResponse(res, 200, readUsername(req.url.split("/")[1]));
       }
     }
 
