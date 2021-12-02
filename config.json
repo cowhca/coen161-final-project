@@ -1,0 +1,8 @@
+{
+    "scheme": "mongodb+srv://",
+    "address": "cluster0.vj40o.mongodb.net",
+    "defaultDatabase": "project",
+    "username": "admin",
+    "password": "arman",
+    "port": 8080
+}
