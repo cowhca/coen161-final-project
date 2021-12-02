@@ -5,7 +5,6 @@ const pathToRegexp = require("path-to-regexp");
 // I like to create a bunch of really small files for each function so I only focus on the
 // function at hand. If the files get too big, I get lost in them.
 const createEntry = require("./createEntry");
-const getEntry = require("./getEntry");
 const getAllEntries = require("./getAllEntries");
 const getUserEntries = require("./getUserEntries");
 
@@ -22,7 +21,7 @@ const getUserEntries = require("./getUserEntries");
 const routeRequest = (req) => {
     // routing table
     const routes = {
-        "/quiz/:quiz(.*)?": {
+        "/quiz/:quiz": {
             POST: createEntry,
         },
         "/entries": {
