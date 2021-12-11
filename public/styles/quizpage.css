@@ -1,0 +1,90 @@
+body {
+    background-image: url("https://www.supercars.net/blog/wp-content/uploads/2020/09/2021-BMW-M3-Competition-011-2160-scaled.jpg");
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #16588E;
+}
+
+.logo {
+    width: 5rem;
+    height: 5rem;
+    margin: .5rem;
+}
+
+.tabs {
+    color: #cacaca;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+    font-weight: 700;
+    margin-left: 9vw;
+    margin-top: 4vw;
+}
+
+#quiz-title {
+    text-align: center;
+}
+
+.question {
+    border-radius: .5rem;
+    margin: auto;
+    margin-top: 1rem;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+.question-image {
+    margin: auto;
+    width: 20rem;
+}
+
+.question-title {
+    text-align: center;
+}
+
+.question-text {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.options {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.option {
+    border-radius: .5rem;
+    padding: 3rem;
+    background-color: #16588E;
+}
+
+.option:hover {
+    background-color: #81C4FF;
+}
+
+#submit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit {
+    margin: 1rem;
+    padding: 2rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: #16588E;
+}
+
+#submit:hover {
+    background-color: #E7222E;
+}
