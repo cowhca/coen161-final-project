@@ -1,12 +1,12 @@
 body {
-  background-image: url('https://www.supercars.net/blog/wp-content/uploads/2020/09/2021-BMW-M3-Competition-011-2160-scaled.jpg');
+  background-image: url("../bmw_reduced.png");
+  background-size: 100% 122%;
 }
 
 nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #16588e;
 }
 
 .logo {
@@ -16,28 +16,55 @@ nav {
 }
 
 .tabs {
-  color: #cacaca;
-  font-family: 'Roboto', sans-serif;
+  color: #363434;
+  font-family: "Roboto", sans-serif;
   font-size: 2vw;
   font-weight: 700;
   margin-left: 9vw;
-  text-decoration: none;
+  margin-top: 4vw;
 }
 
 #quiz-title {
-  font-family: 'Open Sans';
-  font-weight: 400;
   text-align: center;
 }
 
 .question {
   border-radius: 0.5rem;
-  margin: auto;
   margin-top: 1rem;
-  width: 50rem;
+  width: 60%;
+  height: 40em;
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
+  background-color: white;
+  background-image: url("../bmw_transparent.png");
+  background-size: 70% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 5px 5px 5px grey;
+}
+
+#question1 {
+}
+
+#question2 {
+  display: none;
+}
+
+#question2_answered {
+}
+
+#question3 {
+  display: none;
+}
+
+#question4 {
+  display: none;
+}
+
+#question5 {
+  display: none;
 }
 
 .question-image {
@@ -46,14 +73,10 @@ nav {
 }
 
 .question-title {
-  font-family: 'Open Sans';
-  font-weight: 400;
   text-align: center;
 }
 
 .question-text {
-  font-family: 'Open Sans';
-  font-weight: 400;
   text-align: center;
   width: 50%;
   margin: auto;
@@ -68,26 +91,32 @@ nav {
 }
 
 .option {
-  font-family: 'Open Sans';
-  font-weight: 400;
   border-radius: 0.5rem;
   padding: 3rem;
   background-color: #16588e;
 }
 
 .option:hover {
-  background-color: #e7222e;
+  background-color: #81c4ff;
 }
 
-#submit-container {
+#next {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #submit {
-  font-family: 'Open Sans';
-  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hidden {
+  display: none;
+}
+
+.submit {
   margin: 1rem;
   padding: 2rem;
   border: none;
@@ -95,11 +124,6 @@ nav {
   background-color: #16588e;
 }
 
-#submit:hover {
+.submit:hover {
   background-color: #e7222e;
-}
-
-.clicked {
-  box-shadow: 0.2rem 0.2rem #16588e;
-  background: #e7222e;
 }
