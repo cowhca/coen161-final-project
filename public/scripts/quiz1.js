@@ -1,4 +1,4 @@
-rubric = [0, 1, 0];
+rubric = [0, 1, 0, 3, 3];
 
 console.log("hey");
 
