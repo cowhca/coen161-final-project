@@ -4,12 +4,6 @@ const sendResponse = require("./utils/send-response");
 const createEntry = (req, res) => {
     return readBody(req).then((body) => {
         const options = JSON.parse(body);
-        console.log("options");
-        console.log(options);
-        console.log(options.username);
-        console.log(req.params.quiz);
-        console.log(options.score);
-        console.log(options.maxScore);
         if (
             options.username === undefined ||
             req.params.quiz === undefined ||

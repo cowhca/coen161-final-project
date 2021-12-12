@@ -1,7 +1,6 @@
 const http = require("http");
 
 const sendResponse = (res, statusCode, body = null, json = true) => {
-    console.log("statusCode: " + statusCode);
     if (body && res.statusCode !== 500) {
         try {
             const headers = {
@@ -27,10 +26,8 @@ const sendResponse = (res, statusCode, body = null, json = true) => {
 
         if (res.statusCode === 500) {
             console.log("ERROR");
-            // res.log.error = body;
         }
     }
-    // console.log(res);
     res.end();
     return Promise.resolve({
         statusCode,

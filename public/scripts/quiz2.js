@@ -5,7 +5,6 @@ options = document.getElementsByClassName("option");
 
 for (option of options) {
     option.addEventListener("click", (event) => {
-        console.log("heyo");
         allOptions = event.currentTarget.parentElement.children;
 
         for (o of allOptions) {
@@ -32,12 +31,10 @@ submit.addEventListener("click", (event) => {
         }
         answers.push(i);
     }
-    console.log(answers);
     grade(answers);
 });
 
 function grade(answers) {
-    console.log(JSON.stringify(rubric));
     count = 0;
     for (let i = 0; i < rubric.length; ++i) {
         if (answers[i] === rubric[i]) {

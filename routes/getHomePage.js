@@ -2,18 +2,6 @@ const sendResponse = require("./utils/send-response");
 const fs = require("fs/promises");
 
 const getHomePage = (req, res) => {
-    // return fs
-    //     .readFile("./public/home.html")
-    //     .then((data) => {
-    //         res.writeHead(200);
-    //         res.write(data);
-    //         res.end();
-    //     })
-    //     .catch((err) => {
-    //         res.writeHead(500);
-    //         res.end();
-    //     });
-    console.log("GETHOMEPAGE");
     return fs
         .readFile("./public/home.html")
         .then((data) => {

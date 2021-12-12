@@ -104,7 +104,6 @@ const handleRequests = (db) => {
     // return a function that fulfills that can be used as the  http.createServer()
     // callback function to http.createServer
     return (req, res) => {
-        console.log("Request URL: " + req.url);
         let handlersForURL = routeRequest(req);
 
         // if we can't match the URL, then send back a 404
@@ -116,7 +115,6 @@ const handleRequests = (db) => {
 
         // if the URL matched but we can't handle the request method, send back a 405
         const handlerForRequestMethod = handlersForURL[req.method];
-        console.log(req.method);
         if (!handlerForRequestMethod) {
             return sendResponse(res, 405, {
                 error: `${req.method} requests are not allowed for ${req.url}`,

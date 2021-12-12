@@ -2,7 +2,6 @@ const sendResponse = require("./utils/send-response");
 const fs = require("fs/promises");
 
 const getWOE = (req, res) => {
-    console.log("GETWOE");
     return fs
         .readFile("./public/wallOfEnthusiast.html")
         .then((data) => {

@@ -2,7 +2,6 @@ const sendResponse = require("./utils/send-response");
 const fs = require("fs/promises");
 
 const getQuiz1 = (req, res) => {
-    console.log("GETQUIZ1");
     return fs
         .readFile("./public/quiz1.html")
         .then((data) => {

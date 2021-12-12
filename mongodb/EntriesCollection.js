@@ -67,7 +67,7 @@ const EntriesCollection = (db) => {
             .find({ score: 5 })
             .toArray()
             .then((cursor) => {
-                console.log(`getUserEntries::returning ${cursor.length} items`);
+                console.log(`getEnthusiasts::returning ${cursor.length} items`);
                 return { entries: cursor };
             });
     };
