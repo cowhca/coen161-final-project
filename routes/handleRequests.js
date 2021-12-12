@@ -30,6 +30,15 @@ const routeRequest = (req) => {
         "/user/:user": {
             GET: getUserEntries,
         },
+        "/coen-161/final/quizzes/quiz/:quiz": {
+            POST: createEntry,
+        },
+        "/coen-161/final/quizzes/entries": {
+            GET: getAllEntries,
+        },
+        "/coen-161/final/quizzes/user/:user": {
+            GET: getUserEntries,
+        },
     };
 
     let matcher;
@@ -82,6 +91,7 @@ const handleRequests = (db) => {
 
         // if the URL matched but we can't handle the request method, send back a 405
         const handlerForRequestMethod = handlersForURL[req.method];
+        console.log(req.method);
         if (!handlerForRequestMethod) {
             return sendResponse(res, 405, {
                 error: `${req.method} requests are not allowed for ${req.url}`,
