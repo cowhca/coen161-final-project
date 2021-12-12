@@ -1,27 +1,36 @@
 .logo {
-  width: 5rem;
-  height: 5rem;
-  margin: 0.5rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem;
 }
 
 nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #16588e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #16588e;
 }
 
 .tabs {
-  color: #cacaca;
-  font-family: 'Roboto', sans-serif;
-  font-size: 2vw;
-  font-weight: 700;
-  margin-left: 9vw;
-  text-decoration: none;
+    color: #cacaca;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+    font-weight: 700;
+    margin-left: 9vw;
+    text-decoration: none;
 }
 
-#enthusiast {
-  text-align: center;
-  font-family: 'Open Sans';
-  font-weight: 400;
+#header {
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+.enthusiast {
+    background-color: #81c4ff;
+    width: 60%;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    text-align: center;
 }

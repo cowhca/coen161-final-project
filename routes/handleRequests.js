@@ -8,6 +8,11 @@ const createEntry = require("./createEntry");
 const getAllEntries = require("./getAllEntries");
 const getUserEntries = require("./getUserEntries");
 const getHomePage = require("./getHomePage");
+const getPublicFile = require("./getPublicFile");
+const getQuiz1 = require("./getQuiz1");
+const getQuiz2 = require("./getQuiz2");
+const getWOE = require("./getWOE");
+const getEnthusiasts = require("./getEnthusiasts");
 
 /**
  * @function routeRequest
@@ -22,15 +27,15 @@ const getHomePage = require("./getHomePage");
 const routeRequest = (req) => {
     // routing table
     const routes = {
-        "/quiz/:quiz": {
-            POST: createEntry,
-        },
-        "/entries": {
-            GET: getAllEntries,
-        },
-        "/user/:user": {
-            GET: getUserEntries,
-        },
+        // "/quiz/:quiz": {
+        //     POST: createEntry,
+        // },
+        // "/entries": {
+        //     GET: getAllEntries,
+        // },
+        // "/user/:user": {
+        //     GET: getUserEntries,
+        // },
         "/coen-161/final/quizzes/quiz/:quiz": {
             POST: createEntry,
         },
@@ -41,14 +46,23 @@ const routeRequest = (req) => {
             GET: getUserEntries,
         },
         "/coen-161/final/quizzes/": {
-            // We need a get end point for each of the pages I think
-            // the function needs to respond with the html
-            // we also need a way to get the css files
             GET: getHomePage,
         },
-        // "/coen-161/final/quizzes/public(/.*)?": {
-        //     GET: getPublicFile,
-        // },
+        "/coen-161/final/quizzes/public(/.*)?": {
+            GET: getPublicFile,
+        },
+        "/coen-161/final/quizzes/quiz1": {
+            GET: getQuiz1,
+        },
+        "/coen-161/final/quizzes/quiz2": {
+            GET: getQuiz2,
+        },
+        "/coen-161/final/quizzes/wall-of-enthusiasts": {
+            GET: getWOE,
+        },
+        "/coen-161/final/quizzes/enthusiasts": {
+            GET: getEnthusiasts,
+        },
     };
 
     let matcher;
@@ -90,6 +104,7 @@ const handleRequests = (db) => {
     // return a function that fulfills that can be used as the  http.createServer()
     // callback function to http.createServer
     return (req, res) => {
+        console.log("Request URL: " + req.url);
         let handlersForURL = routeRequest(req);
 
         // if we can't match the URL, then send back a 404

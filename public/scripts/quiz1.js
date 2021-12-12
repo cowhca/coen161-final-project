@@ -1,7 +1,5 @@
 rubric = [0, 1, 0, 3, 3];
 
-console.log("hey");
-
 questions = document.getElementsByClassName("question");
 options = document.getElementsByClassName("option");
 
@@ -50,16 +48,12 @@ function grade(answers) {
     window.alert("You got " + count + " out of " + questions.length + " right.");
     result = {
         username: un,
-        character: "elsa",
+        quiz: "quiz1",
         score: count,
-        maxscore: questions.length,
+        maxScore: questions.length,
     };
 
-    // fetch("http://localhost:8080/user/connor")
-    //     .then((response) => response.json())
-    //     .then((data) => console.log(data));
-
-    fetch("http://localhost:8080/quiz/quiz1", {
+    fetch("./quiz/quiz1", {
             mode: "cors",
             method: "POST",
             headers: {
@@ -70,25 +64,4 @@ function grade(answers) {
         })
         .then((response) => response.json())
         .then((data) => console.log(data));
-
-    // fetch("http://localhost:8080/quiz/quiz1", {
-    //         mode: "no-cors",
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({ username: "test", character: "elsa" }),
-    //     })
-    //     .then((response) => response.json())
-    //     .then((data) => console.log(data));
-
-    // fetch("localhost:8080/entries");
-    // fetch("localhost:8080/quiz/quiz1", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json;charset=utf-8",
-    //     },
-    //     body: JSON.stringify(result),
-    // });
-    //
 }

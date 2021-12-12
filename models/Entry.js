@@ -9,15 +9,17 @@
  *
  * @param {string} username  = the username
  * @param {string} quiz      = the quiz the usern took
- * @param {string} character = the character that they are most like
+ * @param {integer} score    = the score received on this quiz
+ * @param {integer} maxScore = the maxScore possible on this quiz
  *
- * @returns { {username: string, quiz: string , character: string}} Entry
+ * @returns { {username: string, quiz: string , score: integer, maxScore: integer}} Entry
  */
-const Entry = (username, quiz, character) => {
+const Entry = (username, quiz, score, maxScore) => {
     return {
         username,
         quiz,
-        character,
+        score,
+        maxScore,
     };
 };
 

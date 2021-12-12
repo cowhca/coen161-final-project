@@ -4,14 +4,30 @@ const sendResponse = require("./utils/send-response");
 const createEntry = (req, res) => {
     return readBody(req).then((body) => {
         const options = JSON.parse(body);
-        if (!options.username || !options.character) {
+        console.log("options");
+        console.log(options);
+        console.log(options.username);
+        console.log(req.params.quiz);
+        console.log(options.score);
+        console.log(options.maxScore);
+        if (
+            options.username === undefined ||
+            req.params.quiz === undefined ||
+            options.score === undefined ||
+            options.maxScore === undefined
+        ) {
             return sendResponse(res, 400, {
-                error: "username and character are required fields",
+                error: "username, quiz, score, and maxScore are required fields",
             });
         }
 
         return req.app.db
-            .createEntry(options.username, req.params.quiz, options.character)
+            .createEntry(
+                options.username,
+                req.params.quiz,
+                options.score,
+                options.maxScore
+            )
             .then((entry) => {
                 sendResponse(res, 201, { entry });
             });

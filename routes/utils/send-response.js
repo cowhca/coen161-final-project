@@ -26,7 +26,8 @@ const sendResponse = (res, statusCode, body = null, json = true) => {
         res.writeHead(statusCode);
 
         if (res.statusCode === 500) {
-            res.log.error = body;
+            console.log("ERROR");
+            // res.log.error = body;
         }
     }
     // console.log(res);

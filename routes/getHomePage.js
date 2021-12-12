@@ -13,7 +13,7 @@ const getHomePage = (req, res) => {
     //         res.writeHead(500);
     //         res.end();
     //     });
-
+    console.log("GETHOMEPAGE");
     return fs
         .readFile("./public/home.html")
         .then((data) => {

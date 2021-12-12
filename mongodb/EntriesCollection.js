@@ -41,7 +41,7 @@ const EntriesCollection = (db) => {
     };
 
     /**
-     * @function getAllEntries
+     * @function getUserEntries
      * @description returns all entries from database
      *
      * @returns {Promise<Array<Entry>>} all entries in the database
@@ -49,6 +49,22 @@ const EntriesCollection = (db) => {
     const getUserEntries = (user) => {
         return collection
             .find({ username: user })
+            .toArray()
+            .then((cursor) => {
+                console.log(`getUserEntries::returning ${cursor.length} items`);
+                return { entries: cursor };
+            });
+    };
+
+    /**
+     * @function getEnthusiasts
+     * @description returns all entries with a perfect score
+     *
+     * @returns {Promise<Array<Entry>>}
+     */
+    const getEnthusiasts = () => {
+        return collection
+            .find({ score: 5 })
             .toArray()
             .then((cursor) => {
                 console.log(`getUserEntries::returning ${cursor.length} items`);
@@ -78,14 +94,15 @@ const EntriesCollection = (db) => {
      *
      * @param {string} username  - the username of the user
      * @param {string} quiz      - the quiz the user took
-     * @param {string} character - the chacter the user is most like
+     * @param {integer} score    - the amount of questions answered correctly
+     * @param {integer} maxScore - the total number of questions
      * @return {Entry}
      */
-    const createEntry = (username, quiz, character) => {
+    const createEntry = (username, quiz, score, maxScore) => {
         // because the MongoDB insertOne function doesn't return the entire
         // created object, just the _id field for a subsequent get, we return
         // the new entry once we've successfully created a document
-        const entry = Entry(username, quiz, character);
+        const entry = Entry(username, quiz, score, maxScore);
         return collection.insertOne(entry).then(() => {
             return entry;
         });
@@ -96,6 +113,7 @@ const EntriesCollection = (db) => {
         getEntry,
         getUserEntries,
         getAllEntries,
+        getEnthusiasts,
     };
 };
 

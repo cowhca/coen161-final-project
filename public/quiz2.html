@@ -1,21 +1,24 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/quizpage.css" />
+    <link rel="stylesheet" href="public/styles/quizpage.css" />
     <title>BMW Quiz</title>
 </head>
 
 <body>
     <nav>
-        <img class="logo" src="https://logos-download.com/wp-content/uploads/2016/02/BMW_logo_blue.png" />
-        <h1 class="tabs">Quiz 1</h1>
-        <h1 class="tabs">Quiz 2</h1>
-        <h1 class="tabs">Official BMW Site</h1>
-        <h1 class="tabs">About</h1>
+        <a href=".">
+            <img class="logo" src="public/bmw-logo.png" />
+        </a>
+        <a href="./quiz1" class="tabs">Quiz 1</a>
+        <a href="./quiz2" class="tabs">Quiz 2</a>
+        <a href="https://www.bmwusa.com/" target="_blank" class="tabs">
+        Official BMW Site
+      </a>
+        <a href="./wall-of-enthusiasts" class="tabs">Wall of Enthusiast</a>
     </nav>
     <h1 id="quiz-title">Quiz 2</h1>
 
@@ -147,7 +150,7 @@
         </section>
     </section>
 </body>
-<script src="scripts/quiz2.js"></script>
-<script src="scripts/db_quiz.js"></script>
+<script src="./public/scripts/quiz2.js"></script>
+<script src="./public/scripts/db_quiz.js"></script>
 
 </html>
