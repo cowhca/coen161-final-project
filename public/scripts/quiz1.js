@@ -7,8 +7,7 @@ options = document.getElementsByClassName("option");
 
 for (option of options) {
     option.addEventListener("click", (event) => {
-        // event.currentTarget.classList.toggle("clicked");
-
+        console.log("heyo");
         allOptions = event.currentTarget.parentElement.children;
 
         for (o of allOptions) {
