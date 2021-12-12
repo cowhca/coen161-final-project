@@ -47,7 +47,49 @@ function grade(answers) {
             ++count;
         }
     }
-    let username = window.prompt("What is your username?");
+    let un = window.prompt("What is your username?");
     window.alert("You got " + count + " out of " + questions.length + " right.");
+    result = {
+        username: un,
+        character: "elsa",
+        score: count,
+        maxscore: questions.length,
+    };
+
+    // fetch("http://localhost:8080/user/connor")
+    //     .then((response) => response.json())
+    //     .then((data) => console.log(data));
+
+    fetch("http://localhost:8080/quiz/quiz1", {
+            mode: "cors",
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(result),
+            origin: "test",
+        })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+
+    // fetch("http://localhost:8080/quiz/quiz1", {
+    //         mode: "no-cors",
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({ username: "test", character: "elsa" }),
+    //     })
+    //     .then((response) => response.json())
+    //     .then((data) => console.log(data));
+
+    // fetch("localhost:8080/entries");
+    // fetch("localhost:8080/quiz/quiz1", {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json;charset=utf-8",
+    //     },
+    //     body: JSON.stringify(result),
+    // });
     //
 }

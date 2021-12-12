@@ -39,6 +39,11 @@ const routeRequest = (req) => {
         "/coen-161/final/quizzes/user/:user": {
             GET: getUserEntries,
         },
+        "/coen-161/final/quizzes/": {
+            // We need a get end point for each of the pages I think
+            // the function needs to respond with the html
+            // we also need a way to get the css files
+        },
     };
 
     let matcher;
