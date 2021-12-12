@@ -25,6 +25,8 @@ nav {
 }
 
 #quiz-title {
+  font-family: 'Open Sans';
+  font-weight: 400;
   text-align: center;
 }
 
@@ -44,10 +46,14 @@ nav {
 }
 
 .question-title {
+  font-family: 'Open Sans';
+  font-weight: 400;
   text-align: center;
 }
 
 .question-text {
+  font-family: 'Open Sans';
+  font-weight: 400;
   text-align: center;
   width: 50%;
   margin: auto;
@@ -62,6 +68,8 @@ nav {
 }
 
 .option {
+  font-family: 'Open Sans';
+  font-weight: 400;
   border-radius: 0.5rem;
   padding: 3rem;
   background-color: #16588e;
@@ -78,6 +86,8 @@ nav {
 }
 
 #submit {
+  font-family: 'Open Sans';
+  font-weight: 400;
   margin: 1rem;
   padding: 2rem;
   border: none;

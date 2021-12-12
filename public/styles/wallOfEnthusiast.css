@@ -19,3 +19,9 @@ nav {
   margin-left: 9vw;
   text-decoration: none;
 }
+
+#enthusiast {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
