@@ -68,7 +68,7 @@ nav {
 }
 
 .option:hover {
-    background-color: #81C4FF;
+    background-color: #E7222E;
 }
 
 #submit-container {
@@ -87,4 +87,9 @@ nav {
 
 #submit:hover {
     background-color: #E7222E;
+}
+
+.clicked {
+    box-shadow: .2rem .2rem #16588E;
+    background: #E7222E;
 }
