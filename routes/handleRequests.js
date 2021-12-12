@@ -7,6 +7,7 @@ const pathToRegexp = require("path-to-regexp");
 const createEntry = require("./createEntry");
 const getAllEntries = require("./getAllEntries");
 const getUserEntries = require("./getUserEntries");
+const getHomePage = require("./getHomePage");
 
 /**
  * @function routeRequest
@@ -43,7 +44,11 @@ const routeRequest = (req) => {
             // We need a get end point for each of the pages I think
             // the function needs to respond with the html
             // we also need a way to get the css files
+            GET: getHomePage,
         },
+        // "/coen-161/final/quizzes/public(/.*)?": {
+        //     GET: getPublicFile,
+        // },
     };
 
     let matcher;
