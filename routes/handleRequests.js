@@ -36,31 +36,31 @@ const routeRequest = (req) => {
         // "/user/:user": {
         //     GET: getUserEntries,
         // },
-        "/coen-161/final/quizzes/quiz/:quiz": {
+        "/quiz/:quiz": {
             POST: createEntry,
         },
-        "/coen-161/final/quizzes/entries": {
+        "/entries": {
             GET: getAllEntries,
         },
-        "/coen-161/final/quizzes/user/:user": {
+        "/user/:user": {
             GET: getUserEntries,
         },
-        "/coen-161/final/quizzes/": {
+        "/": {
             GET: getHomePage,
         },
-        "/coen-161/final/quizzes/public(/.*)?": {
+        "/public(/.*)?": {
             GET: getPublicFile,
         },
-        "/coen-161/final/quizzes/quiz1": {
+        "/quiz1": {
             GET: getQuiz1,
         },
-        "/coen-161/final/quizzes/quiz2": {
+        "/quiz2": {
             GET: getQuiz2,
         },
-        "/coen-161/final/quizzes/wall-of-enthusiasts": {
+        "/wall-of-enthusiasts": {
             GET: getWOE,
         },
-        "/coen-161/final/quizzes/enthusiasts": {
+        "/enthusiasts": {
             GET: getEnthusiasts,
         },
     };

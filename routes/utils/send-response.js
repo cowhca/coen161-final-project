@@ -1,11 +1,11 @@
 const http = require("http");
 
-const sendResponse = (res, statusCode, body = null, json = true) => {
+const sendResponse = (res, statusCode, body = null, type = "text/html") => {
     if (body && res.statusCode !== 500) {
         try {
             const headers = {
                 "Access-Control-Allow-Origin": "*",
-                "Content-Type": json ? "application/json" : "text/html",
+                "Content-Type": type,
                 ...res.headers,
             };
 

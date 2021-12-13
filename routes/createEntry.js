@@ -23,7 +23,7 @@ const createEntry = (req, res) => {
                 options.maxScore
             )
             .then((entry) => {
-                sendResponse(res, 201, { entry });
+                sendResponse(res, 201, { entry }, "application/json");
             });
     });
 };

@@ -5,7 +5,7 @@ const getWOE = (req, res) => {
     return fs
         .readFile("./public/wallOfEnthusiast.html")
         .then((data) => {
-            sendResponse(res, 200, data, false);
+            sendResponse(res, 200, data, false, "text/html");
         })
         .catch((err) => {
             sendResponse(res, 500);
