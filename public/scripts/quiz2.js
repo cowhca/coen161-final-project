@@ -1,4 +1,4 @@
-rubric = [3, 2, 1, 0, 1];
+rubric = [3, 3, 1, 3, 3];
 
 questions = document.getElementsByClassName("question");
 options = document.getElementsByClassName("option");
