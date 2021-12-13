@@ -1,47 +1,45 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/quizpage.css" />
+    <link rel="stylesheet" href="public/styles/quizpage.css" />
     <title>BMW Quiz</title>
   </head>
 
   <body>
     <nav>
-      <img
-        class="logo"
-        src="https://logos-download.com/wp-content/uploads/2016/02/BMW_logo_blue.png"
-      />
-      <h1 class="tabs">Quiz 1</h1>
-      <h1 class="tabs">Quiz 2</h1>
-      <h1 class="tabs">Official BMW Site</h1>
-      <h1 class="tabs">About</h1>
+      <a href=".">
+        <img class="logo" src="public/bmw-logo.png" alt="bmw logo" />
+      </a>
+      <a href="./quiz1" class="tabs">Quiz 1</a>
+      <a href="./quiz2" class="tabs">Quiz 2</a>
+      <a href="https://www.bmwusa.com/" target="_blank" class="tabs">
+        Official BMW Site
+      </a>
+      <a href="./wall-of-enthusiasts" class="tabs">Wall of Enthusiast</a>
     </nav>
-    <h1 id="quiz-title">Quiz 1</h1>
+    <a name="top"></a>
+    <h1 id="quiz-title">Quiz 2</h1>
 
     <section class="question" id="question1">
       <h2 class="question-title">Question 1</h2>
       <p class="question-text">
-        [Question] uhaestuhoeas hustoeau huseta uhsth ashu uhets sahts shueth
+        In 1978, BMW released the first M badged car, the M1 at the...
       </p>
-      <img
-        class="question-image"
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.motormemos.com%2Fwp-content%2Fuploads%2F2020%2F06%2FBMW-M2-CS-photos-images-47.jpg&f=1&nofb=1"
-      />
+      <img class="question-image" src="public/bmw_m1.jpg" alt="bmw m1" />
       <section class="options">
         <section class="option">
-          <p>Option 1</p>
+          <p>Paris Motor Show</p>
         </section>
         <section class="option">
-          <p>Option 2</p>
+          <p>London Autoshow</p>
         </section>
         <section class="option">
-          <p>Option 3</p>
+          <p>American Truck Convention</p>
         </section>
         <section class="option">
-          <p>Option 4</p>
+          <p>German Congress</p>
         </section>
       </section>
     </section>
@@ -50,24 +48,26 @@
       <section class="question" id="question2_answered">
         <h2 class="question-title">Question 2</h2>
         <p class="question-text">
-          [Question] uhaestuhoeas hustoeau huseta uhsth ashu uhets sahts shueth
+          The 3-series, arguably the most famous BMW in the world, was first
+          introduced with a
         </p>
         <img
           class="question-image"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.motormemos.com%2Fwp-content%2Fuploads%2F2020%2F06%2FBMW-M2-CS-photos-images-47.jpg&f=1&nofb=1"
+          src="public/bmw-3series.jpg"
+          alt="bmw 3 series"
         />
         <section class="options">
           <section class="option">
-            <p>Option 1</p>
+            <p>4 cylinder engine</p>
           </section>
           <section class="option">
-            <p>Option 2</p>
+            <p>Inline 6 engine</p>
           </section>
           <section class="option">
-            <p>Option 3</p>
+            <p>V6 engine</p>
           </section>
           <section class="option">
-            <p>Option 4</p>
+            <p>V8 engine</p>
           </section>
         </section>
       </section>
@@ -77,24 +77,22 @@
       <section class="question" id="question3_answered">
         <h2 class="question-title">Question 3</h2>
         <p class="question-text">
-          [Question] uhaestuhoeas hustoeau huseta uhsth ashu uhets sahts shueth
+          A very popular car amongst enthusiasts, the ___ was produced between
+          December 2004 and October 2013
         </p>
-        <img
-          class="question-image"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.motormemos.com%2Fwp-content%2Fuploads%2F2020%2F06%2FBMW-M2-CS-photos-images-47.jpg&f=1&nofb=1"
-        />
+        <img class="question-image" src="public/e90.jpg" alt="bmw e90" />
         <section class="options">
           <section class="option">
-            <p>Option 1</p>
+            <p>E90</p>
           </section>
           <section class="option">
-            <p>Option 2</p>
+            <p>E21</p>
           </section>
           <section class="option">
-            <p>Option 3</p>
+            <p>F30</p>
           </section>
           <section class="option">
-            <p>Option 4</p>
+            <p>E69</p>
           </section>
         </section>
       </section>
@@ -104,24 +102,27 @@
       <section class="question" id="question4_answered">
         <h2 class="question-title">Question 4</h2>
         <p class="question-text">
-          [Question] uhaestuhoeas hustoeau huseta uhsth ashu uhets sahts shueth
+          A decision upsetting many new car buyers in America, BMW announced
+          that they will no longer be selling manual transmission 3-series
+          vehicles starting in
         </p>
         <img
           class="question-image"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.motormemos.com%2Fwp-content%2Fuploads%2F2020%2F06%2FBMW-M2-CS-photos-images-47.jpg&f=1&nofb=1"
+          src="public/manual.jpg"
+          alt="manual transmission"
         />
         <section class="options">
           <section class="option">
-            <p>Option 1</p>
+            <p>2015</p>
           </section>
           <section class="option">
-            <p>Option 2</p>
+            <p>2022</p>
           </section>
           <section class="option">
-            <p>Option 3</p>
+            <p>2012</p>
           </section>
           <section class="option">
-            <p>Option 4</p>
+            <p>2018</p>
           </section>
         </section>
       </section>
@@ -131,31 +132,31 @@
       <section class="question" id="question5_answered">
         <h2 class="question-title">Question 5</h2>
         <p class="question-text">
-          [Question] uhaestuhoeas hustoeau huseta uhsth ashu uhets sahts shueth
+          The most iconic E30 car ever produced, the BMW E30 M3, is favored by
+          enthusiasts due to its
         </p>
-        <img
-          class="question-image"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.motormemos.com%2Fwp-content%2Fuploads%2F2020%2F06%2FBMW-M2-CS-photos-images-47.jpg&f=1&nofb=1"
-        />
+        <img class="question-image" src="public/e30.jpg" alt="bmw e30" />
         <section class="options">
           <section class="option">
-            <p>Option 1</p>
+            <p>Reliability</p>
           </section>
           <section class="option">
-            <p>Option 2</p>
+            <p>Comfort</p>
           </section>
           <section class="option">
-            <p>Option 3</p>
+            <p>Cost</p>
           </section>
           <section class="option">
-            <p>Option 4</p>
+            <p>Modifiability</p>
           </section>
         </section>
       </section>
     </section>
 
     <section id="next">
-      <button class="submit" id="next1" type="submit">NEXT</button>
+      <a href="#top">
+        <button class="submit" id="next1" type="submit">NEXT</button>
+      </a>
     </section>
 
     <section id="hidden">
@@ -164,5 +165,6 @@
       </section>
     </section>
   </body>
-  <script src="scripts/db_quiz.js"></script>
+  <script src="./public/scripts/quiz2.js"></script>
+  <script src="./public/scripts/db_quiz.js"></script>
 </html>
